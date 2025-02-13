@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_account, only: [:destroy]
+  before_action :authenticate_account, only: [ :destroy ]
 
   def create
     account = Account.find_by(atm_account_number: params[:atm_account_number])
